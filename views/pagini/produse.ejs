@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="keywords" content="Sneakers,haine de firma,accesorii">
+        <meta name="description" content="Footstore ofera o colectie variata de sneakers, haine de firma originale si accesorii sportive">
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+        <title>Footstore - home</title>
+        <%- include("../fragmente/head") %>     
+        <script type="text/javascript" src=/resurse/js/produse.js></script>
+        <script>
+
+        </script>
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <br>
+        <br>
+        <label> Caută: <input type="text" id="inp-nume"></label>
+        <br>
+        <br>
+        <div> Preț:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
+            <p><label>Până în 500 Lei
+                <input id="i_rad1"  name="gr_rad" value="0:500" type="radio"/>
+            </label></p>
+            <p><label>500 - 1000 Lei
+                <input id="i_rad2"  name="gr_rad" value="500:1000" type="radio"/>
+            </label>
+            <p><label>Peste 1000 Lei
+                <input id="i_rad3" name="gr_rad" value="1000:1000000000" type="radio"/>
+            </label>
+            <p><label>Toate
+                <input id="i_rad4" checked name="gr_rad" value="toate" type="radio"/>
+            </label>
+        </div>
+
+        <label for="inp-pret">Pret minim: </label>
+        <input type="range" id="inp-pret" value="0" min="0" max="1500">
+        <span id="infoRange">(0 lei)</span>
+        
+        <label>Categorie:
+            <select id="inp-categorie">
+                <option id="sel-toate" selected value="toate">Toate</option>
+                <% for (let opt of locals.optiuni) { %>
+                    <option value="<%- opt.unnest %>"><%- opt.unnest %> </option>
+                <% } %>
+            </select>
+        </label>
+
+        <label>Select multiplu:
+            <select id="i_sel_multiplu" multiple size="4">
+                <option value="newbalance">new balance</option>
+                <option value="2" selected>adidas</option>
+                <option value="3">jordan</option>
+                <option value="4" selected>nike</option>
+              
+            </select>
+
+        <label>Cautare:
+            <input list="id_lista" id="i_datalist">
+            <datalist id="id_lista">
+                <option value="Dunk High">Nike</option>
+                <option value="Jordan 5">Jordan</option>
+                <option value="Yeezy700">Adidas</option>
+                <option value="Jordan 1 University Blue">Jordan</option>
+                <option value="New Balance 9060">New Balance</option>
+            </datalist>
+        </label>
+        <p>
+        <button id="filtrare">Filtreaza</button> 
+        <button id="resetare">Reseteaza</button><br/>
+        <button id="sortCrescNume">Sorteaza crescator dupa pret si nume</button>
+        <button id="sortDescrescNume">Sorteaza descrescator dupa pret si nume</button>
+        
+        </p>
+
+        <label>Textarea:
+            <textarea id="i_textarea">ceva in textarea</textarea>
+        </label>
+        
+        <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+        <section id="produse">
+            <h2>Produse</h2>
+            <div class="grid-produse">
+                <% for( let prod of locals.produse) { %>
+                    <article class="produs" >
+                        <h3 class="nume">Nume: <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+                        <div class="info-prod">
+                            <p class="descriere">Descriere: <span class="val-descriere"><%- prod.descriere%></span></p>
+                            <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
+                            <p class="brand">Brand: <span class="val-brand"><%- prod.brand%></span></p>
+                            <p class="dimensiune">Dimensiune: <span class="val-dimensiune"><%- prod.dimensiune%></span></p>
+                        </div>
+                        <p class="categorie">Categorie produs:<span class="val-categorie"><%- prod.categorie_adidas%></span></p>
+                        <figure>
+                            <a href="/produs/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" /></a>
+                        </figure>
+                        <label class="selecteaza-cos">
+                            Adaugă în coș:<br/>
+                            <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                        </label>
+                    </article>
+                <% }%>
+            </div>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

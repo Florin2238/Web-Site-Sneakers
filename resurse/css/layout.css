@@ -1,0 +1,93 @@
+
+body{
+    --margine-main:7%;
+    --background-pagina:rgb(242, 242, 242);
+    --culoare-text:black;
+    --main-background:antiquewhite;
+    --border:rgb(90, 90, 90);
+    --culoare1: rgb(242, 242, 242);
+    background-color: var(--background-pagina);
+    color: var(--culoare-text);
+    transition: font-size 0.3s ease-in-out;
+
+    --culoare1:#e0e0e0;
+    --culoare2:#3498db;
+    --culoare3:#bcdcf2;
+    
+
+}
+
+
+#grid-pagina {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "z-div1 z-div1 z-div1 z-div1"
+                        "z-div8 z-div8 z-div8 z-div8"
+                        "z-div3 z-div2 z-div2 z-div4"
+                        "z-div5 z-div6 z-div7 z-div7" ;
+}
+
+#grid-pagina>* {
+    border: 2px solid var(--border);
+    padding: 5px 20px;
+}
+
+#div1 {
+    grid-area: z-div1;
+}
+#div2 {
+    grid-area: z-div2;
+}
+#div3 {
+    grid-area: z-div3;
+}
+#div4 {
+    grid-area: z-div4;
+}
+#div5 {
+    grid-area: z-div5;
+}
+#div6 {
+    grid-area: z-div6;
+}
+#div7 {
+    grid-area: z-div7;
+}
+#div8 {
+    grid-area: z-div8;
+}
+
+
+/* media query pentru ecran mic */
+@media screen and (max-width: 700px) {
+    #grid-pagina {
+        display: block; /* layout on a single column */
+    }
+    html {
+        font-size: 12px;
+    }
+    * {
+        animation: none;
+    }
+}
+
+/* media query pentru ecran mediu */
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+    #grid-pagina {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "z-div1 z-div1 z-div1"
+                             "z-div8 z-div8 z-div8"
+                             "z-div3 z-div2 z-div2"
+                             "z-div4 z-div4 z-div6"
+                             "z-div5 z-div7 z-div7"; 
+                }
+    html {
+        font-size: 14px;
+    }
+    * {
+        animation: none;
+    }
+}
+
+

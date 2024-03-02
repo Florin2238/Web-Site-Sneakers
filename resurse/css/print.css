@@ -1,0 +1,94 @@
+@media print {
+    /* 1 */
+   #banner {
+      border: 5px double black;
+      padding: 10px;
+      margin: 0;
+    }
+
+    #banner-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%; 
+    }
+
+    /* 2 */
+    img, figure, figcaption, video, iframe, #link-top {
+        display: none;
+    }
+  
+     /* 3 */
+     #grid-pagina {
+        display: block;
+    }
+    
+    /* 4 */
+      a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* 5 */
+    #titlu { 
+        margin-top: 100px;
+
+    }
+    h1 {
+        text-align: center;
+        /* margin-top: 10%; */
+    }
+
+    ul.meniu {
+        page-break-after: always;
+        display: block;
+    }
+
+    ul.meniu li {
+        list-style-type: circle;
+        overflow: visible;
+        border: none;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    ul.meniu li ul {
+        display: none;
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+   /* 6 */
+   #watermark {
+        color: black;
+        display: block;
+        position: fixed;
+        bottom: 50%;
+        left: 50%;
+    }
+
+    #watermark::before {
+        content: "Popescu \A Florin";
+        white-space: pre-wrap;
+        display: block;
+        text-align: center;
+        opacity: 0.3;
+        width: 60vw;
+        height: 10vh;
+    }
+
+     /* 7 */
+    @page:left {
+        margin-left: 2cm;
+        margin-right: 1cm;
+    }
+    @page:right {
+        margin-left: 1cm;
+        margin-right: 2cm;
+    }
+   
+  }
+  

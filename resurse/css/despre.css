@@ -1,0 +1,63 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../imagini/back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    animation: changeBackground 15s infinite;
+}
+
+
+main {
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+main h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#text-coloane{
+    column-count: 2;
+    column-rule: 3px double black;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 500px) {
+    #text-coloane{
+        column-count: 1;
+    }
+  }
+
+p::selection{
+    color: rgb(229, 150, 5);
+    background-color: var(--culoare3);
+    
+}
+
+
+@keyframes changeBackground {
+    0%, 33% {
+        background-image: url("../imagini/back.jpg"); /* Prima imagine de fundal */
+    }
+   34%, 67% {
+        background-image: url("../imagini/back2.jpg"); /* A doua imagine de fundal */
+    }
+    
+    68%, 100% {
+        background-image: url("../imagini/back.jpg"); /* Prima imagine de fundal */
+    }
+   
+}

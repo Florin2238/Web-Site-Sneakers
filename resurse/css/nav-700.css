@@ -1,0 +1,111 @@
+#hamburger {
+    display: block;
+    height: var(--inaltime-meniu);
+    cursor: pointer;
+}
+
+.hamburger-container {
+    width: 30px;
+    height: var(--inaltime-meniu);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.hamburger-bar {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; 
+}
+
+
+/* Culorile implicite ale fiecărei bare */
+.hamburger-bar:nth-child(1) {
+    background-color: red;
+}
+
+.hamburger-bar:nth-child(2) {
+    background-color: yellow;
+}
+
+.hamburger-bar:nth-child(3) {
+    background-color: blue;
+}
+
+/* bonus delay 300ms in sass */
+.hamburger-container:hover .hamburger-bar:nth-child(1) {
+    transform: rotate(45deg) translate(0, 14px);
+    background-color: var(--culoare-text);
+
+} 
+.hamburger-container:hover .hamburger-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(0, -14px);
+    background-color: var(--culoare-text);
+
+}
+.hamburger-container:hover .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+/*  */
+
+
+
+
+#ch-menu:checked~ul.meniu {
+    display: block;
+}
+
+ul.meniu{
+    display: none;
+    animation-name: animatie-hamburger;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    transform-origin: left top;
+}
+
+ul.meniu ul{
+    position: relative;
+    z-index: 100;
+}
+
+ul.meniu li {
+    width: 100% !important;
+}
+
+@keyframes animatie-hamburger {
+    from {
+        transform: scale(0,0);
+        
+    }
+    to {
+        transform: scale(1,1);
+    }
+}
+
+ul.meniu ul li a::after{
+    display: none;
+}
+
+
+.fa-only {
+    display: none;
+}
+
+ul.meniu li:hover>ul {
+    display: block;
+}
+
+
+/* scrollbar */
+.table-container {
+    margin: 5px, 5px;
+    padding: 5px;
+    width: 300px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}

@@ -1,0 +1,88 @@
+/* Stilizare pentru footer */
+footer {
+    color: var(--culoare-text-meniu);
+    padding: 20px;
+}
+
+#intrebari-frecvente i {
+    font-style: italic;
+}
+
+#intrebari-frecvente details {
+    margin-bottom: 15px;
+}
+
+#intrebari-frecvente details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#intrebari-frecvente details p {
+    margin-top: 5px;
+}
+
+#watermark {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+#banner-container {
+    margin-top: 20px;
+}
+
+#banner {
+    background-color: var(--culoare-meniu);
+    color: var(--culoare-text-meniu);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+address a {
+    color: var(--culoare-text-meniu);
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.address a:hover {
+    text-decoration: underline;
+}
+
+.small {
+    font-size: 12px;
+}
+
+/* Stilizare pentru drepturile de autor */
+.copyright {
+    margin-top: 20px;
+    color: var(--culoare-text-meniu);
+}
+
+/* Stilizare pentru butoanele de contact */
+address a {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+address a:hover {
+    background-color: #bbb;
+}
+
+/* Stilizare pentru linkurile de contact */
+address a {
+    color: var(--culoare-text-meniu);
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Stilizare pentru drepturile de autor */
+.small {
+    font-size: 12px;
+    color: var(--culoare-text-meniu);
+}
+

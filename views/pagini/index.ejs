@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Footstore</title>
+
+      
+        <meta name="author" content="Popescu Florin Daniel"> 
+        <meta name="keywords" content="Sneakers,haine de firma,accesorii">
+        <meta name="description" content="Footstore ofera o colectie variata de sneakers, haine de firma originale si accesorii sportive">
+
+
+
+        <script type="text/javascript" async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <%- include("../fragmente/head.ejs") %>
+    </head>
+  
+    <body>
+
+
+     <%- include("../fragmente/header.ejs") %>
+
+        <main>
+            <div id="grid-pagina">
+                <section id="div1">
+                    <div>
+                        <h2>Bine ați venit în magazinul nostru online!</h2>
+                        
+                    </div>
+                    <article>
+                        <h3>Sneakers și Modă de Ultimă Oră</h3>
+                        <p>Stim că fiecare zi poate fi specială. De aceea, avem <b>mereu</b> cele mai recente modele de sneakers și haine în stoc pentru a vă bucura de stilul lor în orice moment.</p>
+                        <aside>
+                            <h4>Despre Oferte</h4>
+                            <p>Vizitați-ne în magazin pentru a explora cele mai recente tendințe și <button class="btn btn-secondary"><b>oferte speciale</b></button>. Suntem dedicați fiecărui client și depunem eforturi constante pentru a vă oferi cele mai atractive produse la prețuri excelente. La noi, experiența dumneavoastră de cumpărături este o prioritate!</p>
+                        </aside>
+                    </article>
+
+                    <details>
+                        <summary>Oferte Disponibile</summary>
+                        <ol>
+                            <li>
+                                <p>Utilizați codul de reducere <button class="btn btn-primary"><b>SNEAKER20</b></button> pentru a beneficia de <s>10</s> <ins>20%</ins> reducere la următoarea pereche de sneakers la comenzi de peste 300 lei.</p>
+                            </li>
+                            <li>
+                                <p>Invită-ți prietenii să se alăture și să cumpere folosind codul tău de invitație, iar amândoi veți primi o reducere de 20% pentru următoarea comandă. Cu cât împărtășiți mai mult, cu atât economisiți mai mult!</p>
+                            </li>
+                        </ol>
+                    </details>
+                </section>
+                
+
+                <section id="div2">
+                    <h2><i class="fa-regular fa-clock"></i> Tabel</h2>
+                    <div class="table-container">
+                        <table class="table-style">
+                            <caption>Produse Disponibile</caption>
+                            <thead>
+                                <tr>
+                                    <th class="codd">Produs</th>
+                                    <th class="ceven">Preț</th>
+                                    <th class="codd" colspan="2">Disponibilitate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="codd" rowspan="2">NIKE X OFF-WHITE AIR TERRA FORMA</td>
+                                    <td class="ceven">La 1050 lei perechea</td>
+                                    <td class="codd">Stoc</td>
+                                    <td class="codd">30 perechi</td>
+                                </tr>
+                                <tr>
+                                    <td class="ceven">Precomandă</td>
+                                    <td class="codd" colspan="2">Disponibil în 7 zile</td>
+                                </tr>
+                                <tr>
+                                    <td class="codd">Tricouri Adidas</td>
+                                    <td class="ceven">De la 80 lei</td>
+                                    <td class="codd">Stoc</td>
+                                    <td class="codd">280 bucăți</td>
+                                </tr>
+                                <tr>
+                                    <td class="codd">Tricou Off White</td>
+                                    <td class="ceven">La 1350 lei</td>
+                                    <td class="codd" colspan="2">Stoc limitat</td>
+                                </tr>
+                                <tr>
+                                    <td class="codd">Hanorac Hugo Boss</td>
+                                    <td class="ceven">De la 500 lei</td>
+                                    <td class="codd">Stoc</td>
+                                    <td class="codd">150 bucăți</td>
+                                </tr>
+                                <tr>
+                                    <td class="codd">Pantaloni G-Star</td>
+                                    <td class="ceven">De la 300 lei</td>
+                                    <td class="codd">Stoc limitat</td>
+                                    <td class="codd" colspan="2">Contactați pentru disponibilitate</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="codd" colspan="4">Explorați tendințele sezonului și bucurați-vă de reducerea de 10% pentru orice comandă de peste 3 articole. Alegeți combinații de modă unicat și economisiți acum!</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+                
+
+                <section id="div3">
+                    <h2>Calendar</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </section>
+
+                <section id="div4">
+                    <h2><i class="fa-solid fa-bell"></i> Alertă de Modă</h2>
+                    <div class="div4-img">
+                        <p><time datetime="2023-04-10">21 octombrie 2023 - Descoperă cele mai recente tendințe și modele de adidași sosit în magazin!</time></p>
+                        <div class="img-container">
+                            <figure id="fig1" style="width: 50%;">
+                                <picture>
+                                    <source srcset="./resurse/imagini/nike-air-force-mobile.jpg" media="(max-width:700px)"/>
+                                    <source srcset="./resurse/imagini/nike-air-force-tablet.jpg" media="(max-width:1200px)"/>
+                                    <img src="./resurse/imagini/Nike-Air-Force-1-High.jpg" style="width: 30%;" alt="Noul model Nike Air Force 1 High">
+                                </picture>
+                                <figcaption><a href="./resurse/imagini/Nike-Air-Force-1-High.jpg" download="Nike">Descarcă imaginea</a></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <p><time datetime="2022-12-24">25 decembrie 2022</time> - Îți urăm Sărbători Fericite și aducem cele mai hot colecții de adidași și haine pentru a-ți completa garderoba în stilul ultimelor tendințe.</p>
+                    <p><time datetime="2022-12-15">27 decembrie 2022</time> - Oportunitatea ta de a beneficia de oferte exclusive se apropie de final. Plasează comanda acum și fii în pas cu moda!</p>
+                    <p><time datetime="2022-11-11">10 iulie 2020</time> - Profita acum de livrare gratuită pentru orice comandă. Completează-ți colecția cu cele mai cool piese de sezon!</p>
+                </section>
+                
+
+                <section id="div5">
+                    <h2>Utilizatori online</h2>
+                    <div>
+                        <ul>
+                            <li>
+                                <span>Popescu</span>
+                            </li>
+                            <li>
+                                <span>Tudor</span>
+                            </li>
+                            <li>
+                                <span>Ionescu</span>
+                            </li>
+                            <li>
+                                <span>Voiculescu</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="div6">
+                    <h2>Statistici</h2>
+                    <div>
+                        <ul>
+                            <li>
+                                <span>utilizatori inregistrati: 120</span>
+                            </li>
+                            <li>
+                                <span>numarul total de comenzi: 10.000</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="div7">
+                    <h2>Server</h2>
+                    <div>
+                        <ul>
+                            <li>
+                                <span>utilizatori inregistrati: 120</span>
+                            </li>
+                            <li>
+                                <span>numarul total de vizionari: 15.000</span>
+                            </li>
+                            <li>
+                                <span>numarul total de comenzi: 10.000</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <%- include("../fragmente/galerie-statica.ejs") %>
+
+                <br></br>
+            </div>
+            
+        </main>
+
+        <%- include("../fragmente/footer.ejs") %>
+
+
+</body>
+
+</html>
+
+

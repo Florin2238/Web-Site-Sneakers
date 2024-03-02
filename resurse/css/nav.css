@@ -1,0 +1,123 @@
+body {
+    --inaltime-meniu: 25px;
+    --latime-buton: 120px;
+    --culoare-meniu: #d2d5d7;
+    --culoare-text-meniu: black; /* Adăugăm variabilă pentru culoarea textului */
+    --culoare-meniu-hover: #bdc3c7; /* Adăugăm culoare pentru hover */
+    --latime-bord-meniu: 1px;
+}
+
+ul.meniu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul.meniu>li {
+    height: var(--inaltime-meniu);
+    overflow: hidden;
+    line-height: var(--inaltime-meniu);
+    border: var(--latime-bord-meniu) solid black;
+    width: var(--latime-buton);
+    text-align: center;
+    position: relative;
+}
+
+ul.meniu li a {
+    display: block;
+    height: 100%;
+    position: relative;
+    color: var(--culoare-text-meniu); 
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; 
+}
+
+ul.meniu li:hover {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); 
+    background-color: var(--culoare-meniu-hover); 
+}
+
+ul.meniu ul {
+    list-style-type: none;
+    z-index: 10;
+    position: relative;
+    left: -1px;
+    padding: 0;
+    margin: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    display: none;
+}
+
+ul.meniu>li:hover ul {
+    animation-name: deschidere_submeniu;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    display: block;
+}
+
+@keyframes deschidere_submeniu {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+ul.meniu ul li {
+    height: var(--inaltime-meniu);
+    border: var(--latime-bord-meniu) solid black;
+    width: var(--latime-buton);
+    position: relative;
+}
+
+ul.meniu ul li a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+ul.meniu ul li a::after {
+    content: "→";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, left 0.3s ease-in-out;
+  
+}
+
+ul.meniu ul li a:hover::after {
+    opacity: 1;
+    left: -3px;
+}
+
+ul.meniu li {
+    cursor: pointer;
+    background-color: var(--culoare-meniu);
+    transition: all 0.7s linear;
+}
+
+ul.meniu>li:hover {
+    overflow: visible;
+}
+
+ul.meniu a {
+    color: var(--culoare-text-meniu); 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav {
+    height: var(--inaltime-meniu);
+    overflow: visible;
+    position: relative;
+}
+
+#hamburger,
+#ch-menu {
+    display: none;
+}

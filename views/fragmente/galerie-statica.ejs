@@ -1,0 +1,34 @@
+<section id="div8">
+    <h2>Galerie</h2>
+    <div id="grid-galerie">
+        <% var nr_imag = 0; 
+        for (let imag of locals.imagini) {  
+            nr_imag += 1;
+            if (nr_imag > 10)
+                break;
+            var d = new Date();
+            var oraCurenta = d.getHours();
+                                                    
+            if (imag.timp && Array.isArray(imag.timp)) {
+                for (let interval of imag.timp) {
+                    var intervaleTimp = interval.split('-');
+                    if (intervaleTimp.length >= 2) {
+                        var oraInceput = parseInt(intervaleTimp[0], 10);
+                        var oraFinal = parseInt(intervaleTimp[intervaleTimp.length - 1], 10);
+                        
+                        if (oraCurenta >= oraInceput && oraCurenta <= oraFinal) { %>
+                            <figure class="galerie_statica">
+                                <picture>
+                                    <source srcset="<%- imag.cale_imagine_mediu %>" media="(max-width:1200px)" />
+                                    <source srcset="<%- imag.cale_imagine_mic %>" media="(max-width:700px)" />
+                                    <img src="<%- imag.cale_imagine %>" alt="<%- imag.titlu%>">
+                                </picture>
+                                <figcaption><%- imag.titlu %></figcaption>
+                            </figure>
+                        <% }
+                    }
+                }
+            } %>   
+        <% } %>
+    </div>
+</section>

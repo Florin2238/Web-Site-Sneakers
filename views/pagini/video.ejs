@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Footstore</title>
+
+      
+        <meta name="author" content="Popescu Florin Daniel"> 
+        <meta name="keywords" content="Sneakers,haine de firma,accesorii">
+        <meta name="description" content="Footstore ofera o colectie variata de sneakers, haine de firma originale si accesorii sportive">
+
+        
+        <link rel="stylesheet" href="/resurse/css/style.css"  type="text/css">
+
+        <!--Font awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+
+
+        <script type="text/javascript" async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <%- include("../fragmente/head.ejs") %>
+    </head>
+  
+    <body>
+     <%- include("../fragmente/header.ejs") %>
+        <main>
+           
+          
+           <video width="320" height="240" playsinline autoplay loop  muted controls>
+            <source src="resurse/video/adidas.mp4" type="video/mp4">
+            <source src="resurse/video/adidas.ogv" type="video/ogv">
+            <track default src="/resurse/video/tracks/captions-ro.vtt" kind="captions" srclang="ro" label="romana" />
+            <track  src="/resurse/video/tracks/captions-en.vtt" kind="captions" srclang="en" label="engleza" />
+           </video>
+            
+        </main>
+
+        <%- include("../fragmente/footer.ejs") %>
+
+
+</body>
+
+</html>
+
+

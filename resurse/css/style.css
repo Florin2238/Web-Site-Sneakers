@@ -1,0 +1,143 @@
+:root {
+    --border-color: #333; /* culoare pentru borduri */
+    --background-tooltip: rgba(0, 0, 0, 0.8); /* culoare de fundal a tooltip-ului */
+    --background-hover: rgb(25, 120, 188); /* culoare la hover pentru rânduri */
+    --background-cell-hover: #3498db; /* culoare la hover pentru celule */
+    --background-alt: #f9f9f9; /* culoare de fundal alternativă pentru rânduri */
+    --background-header: #f2f2f2; /* culoare de fundal pentru antet */
+    --background-footer: #e0e0e0; /* culoare de fundal pentru subsol */
+    --background-iframe: var(--border-color); /* culoare de fundal pentru iframe */
+    --background-column-even:#f5f5f5;
+    --background-column-odd: #f0f0f0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#link-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#link-anchor {
+    display: block;
+    text-decoration: none;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    padding: 10px 10px;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    transition: background-color 0.7s, opacity 0.7s; /* Adaugă tranziție pentru culoarea de background și opacitate */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.8; /* Opacitate inițială */
+}
+
+#link-anchor:hover {
+    background: linear-gradient(to bottom, #e0e0e0, #cccccc);
+    opacity: 1; /* Devine opac la hover */
+}
+
+.arrow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 24px;
+    line-height: 1;
+    transition: font-size 0.7s;
+}
+
+#link-anchor:hover .arrow {
+    font-size: 34px;
+    transition: font-size 0.7s;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: opacity 0.7s ; /* Adaugă tranziție pentru opacitate */
+    opacity: 0; /* Opacitate inițială */
+}
+
+#link-anchor:hover .tooltip {
+    display: block;
+    opacity: 1; /* Devine opac la hover */
+
+}
+
+
+
+/*  Task taburi   */
+.video-container {
+    display: flex;
+    padding: 0;
+    margin: 2%;
+    position: relative; 
+}
+
+.iframe {
+    position: relative; 
+}
+
+.links {
+    position: absolute; 
+    top: 0;
+    right: -100px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.links a {
+    display: block;
+    width: 100px;
+    height: 60px;
+    border: 1px solid black !important;
+    text-align: center;
+    background-color: var(--culoare-meniu);
+    transition: width 0.5s ease;
+    position: relative; /* Adauga pozitie relativa */
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%; /* Plaseaza pseudo-elementul in partea dreapta a iframe-ului */
+    width: 0;
+    height: 100%;
+    background-color: var(--culoare-meniu);
+}
+
+.links a:hover {
+   width: 150%;
+}
+
+iframe {
+    border: 10px solid black;
+}
+
+
+/* Stilizare .vtt */
+::cue {
+    color: #333; /* culoare închisă conform schemei cromatice */
+    background-color: #fff; /* culoare de fundal albă */
+    font-style: normal; /* font normal */
+   
+}
+
+

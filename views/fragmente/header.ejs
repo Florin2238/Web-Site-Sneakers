@@ -1,0 +1,86 @@
+<header>
+    <h1 id="titlu"><a href="index">Footstore</a></h1>
+
+    <nav>
+        <label id="hamburger" for="ch-menu">
+            <!-- <img src="resurse/imagini/Hamburger_icon.png" alt="menu"> -->
+
+            <!-- bonus etapa 2 -->
+            <div class="hamburger-container">
+                <div class="hamburger-bar"></div>
+                <div class="hamburger-bar"></div>
+                <div class="hamburger-bar"></div>
+            </div>
+            <!--  -->
+        </label>
+        <input id="ch-menu" type="checkbox">
+
+        <ul class="meniu">
+            <li><a href="index"><i class="fa-solid fa-house"></i><span class="fa-only"> Acasa</span></a>
+                <ul>
+                    <li>
+                        <a href="#div1">Bine ati venit</a>
+                    </li>
+                    <li>
+                        <a href="#div2">Tabel</a>
+                    </li>
+                    <li>
+                        <a href="#div3">Calendar</a>
+                    </li>
+                    <li>
+                        <a href="#div4">Anunturi</a>
+                    </li>
+                    <li>
+                        <a href="#div5">Utilizatori</a>
+                    </li>
+                    <li>
+                        <a href="#div6">Statistici</a>
+                    </li>
+                    <li>
+                        <a href="#div7">Server</a> 
+                    </li>
+                    <li>
+                        <a href="#div8">News</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="despre">Despre noi</a>
+                <ul>
+                    <li><a href="#istoric">Istoric</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                </ul>
+            </li>
+
+            <li><a href="produse">Barbati</a>
+                <ul>
+                     <% for (opt of locals.optiuniMeniu) { %>
+                        <li><a href="<%- "/produse?tip=" + opt.unnest%>"> <%- opt.unnest%></a></li>
+                        <% } %>
+                </ul>
+            </li>
+
+            <li><a href="#femei">Femei</a>
+                <ul>
+                    <li><a href="#încălțăminte">Încălțăminte</a></li>
+                    <li><a href="#îmbrăcăminte">Îmbrăcăminte</a></li>
+                    <li><a href="#accesorii">Accesorii</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#copii">Copii</a>
+                <ul>
+                    <li><a href="#încălțăminte">Încălțăminte</a></li>
+                    <li><a href="#îmbrăcăminte">Îmbrăcăminte</a></li>
+                    <li><a href="#accesorii">Accesorii</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#cont">Contul meu</a></li>
+
+            <li><a href="contact">Contact</a></li>
+
+        </ul>
+    </nav>
+  
+</header>

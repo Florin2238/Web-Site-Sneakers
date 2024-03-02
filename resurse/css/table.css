@@ -1,0 +1,55 @@
+.table-container {
+    overflow-x: auto; /* Adăugăm overflow-x pentru a permite scrollbar-ul orizontal */
+    border-radius: 10px; /* Rotunjim colțurile containerului */
+    border: 1px solid var(--border-color); /* Adăugăm un border subțire */
+}
+
+.table-style {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /* Rotunjim colțurile tabelului */
+}
+
+.table-style caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.table-style th,
+.table-style td {
+    padding: 8px;
+    text-align: center;
+}
+
+.table-style th {
+    background-color: var(--background-header);
+    color: #333;
+}
+
+.table-style tbody tr:nth-child(even) {
+    background-color: var(--background-alt);
+}
+
+.table-style tbody tr:hover {
+    background-color: var(--background-hover); /* folosim variabila pentru culoarea la hover pentru rânduri */
+    transition: background-color 0.3s ease-in-out; /* Adăugăm tranzitie pentru schimbarea treptată a culorii */
+}
+
+.table-style tbody tr:hover td:hover {
+    background-color: var(--background-cell-hover); /* folosim variabila pentru culoarea la hover pentru celule */
+}
+
+.table-style tfoot td {
+    background-color: var(--background-footer);
+    font-style: italic;
+}
+
+
+.table-style tr td:nth-child(odd) {
+    background-color: var(--background-column-odd);
+}
+
+.table-style tr td:nth-child(even) {
+    background-color: var(--background-column-even);
+}

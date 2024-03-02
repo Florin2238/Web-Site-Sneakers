@@ -1,0 +1,78 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"cale_imagine":"newbalance.jpg",
+			"titlu":"New Balance 9600",
+			"descriere":"text",
+			"timp":[ "18:00-23:00"]
+		},
+		{
+			"cale_imagine":"yeezy700.jpg",
+			"titlu":"Yeezy 700",
+			"descriere":"text",
+			"timp":["18:00-19:30"]
+			
+		},
+		{
+			"cale_imagine":"jordan1univ.jpg",
+			"titlu":"Jordan 1 University Blue",
+			"descriere":"text",
+			"timp":["09:00-12:00", "16:00-19:00"]
+		},
+		{
+			"cale_imagine":"jordan1c.jpg",
+			"titlu":"Jordan 1 Chicago",
+			"descriere":"text",
+			"timp":[ "12:00-23:00"]
+		},
+		{
+			"cale_imagine":"jordan1t.jpg",
+			"titlu":"Jordan 1 Travis Scott",
+			"descriere":"text",
+			"timp":[ "12:00-21:00"]
+		},
+		{
+			"cale_imagine":"dunk-low.jpg",
+			"titlu":"Dunk Low Purple Court",
+			"descriere":"text",
+			"timp":[ "12:00-22:00"]
+		},
+		{
+			"cale_imagine":"terrex.jpg",
+			"titlu":"Adidas Terrex",
+			"descriere":"text",
+			"timp":[ "12:00-22:00"]
+		},
+		{
+			"cale_imagine":"jordan4.jpg",
+			"titlu":"Jordan 4 Military Black",
+			"descriere":"text",
+			"timp":[ "18:00-22:00"]
+		},
+		{
+			"cale_imagine":"jordan5.jpg",
+			"titlu":"Jordan 5 Retro Racer Blue",
+			"descriere":"text",
+			"timp":[ "18:00-22:00"]
+		},
+		{
+			"cale_imagine":"dunkhigh.jpg",
+			"titlu":"Nike Dunk High",
+			"descriere":"text",
+			"timp":[ "18:00-22:00"]
+		},
+		{
+			"cale_imagine":"offwhite.jpg",
+			"titlu":"Nike Off-White",
+			"descriere":"text",
+			"timp":[ "18:00-22:00"]
+		},
+		{
+			"cale_imagine":"jordanmvp.jpg",
+			"titlu":"Nike Jordan MVP",
+			"descriere":"text",
+			"timp":[ "18:00-19:00"]
+		}
+	]
+}
