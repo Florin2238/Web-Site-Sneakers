@@ -5,4 +5,4 @@ Tehnologii Folosite
 HTML/CSS: Am folosit HTML și CSS pentru a crea structura și aspectul vizual al site-ului.
 JavaScript: Am integrat JavaScript pentru a adăuga funcționalitatea de filtrare a produselor.
 Node.js și Express: Am utilizat Node.js împreună cu framework-ul Express pentru a dezvolta partea de backend a site-ului, gestionând rutele, cererile și răspunsurile HTTP.
-Bază de Date: Am implementat o bază de date folosind Node.js pentru a stoca și gestiona informațiile despre produse, utilizatori și comenzile acestora.
+Bază de Date: Am implementat o bază de date folosind PostgreSql pentru a stoca și gestiona informațiile despre produse si am conectat-o cu ajutorul Node.js-ului.
